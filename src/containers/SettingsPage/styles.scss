@@ -1,0 +1,34 @@
+@import 'theme';
+
+.container {
+    background: #D3D3D3;
+    padding: 1rem;
+    border-radius: 1rem;
+    min-width: 20rem;
+    max-width: 26rem;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+.entry {
+    display: flex;
+    margin-bottom: 0.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 20rem;
+
+    > :first-child {
+        width: 6rem;
+        color: #444;
+    }
+}
+
+.header {
+    margin: 0 0 1rem 0;
+}
+
+.back {
+    margin: 1rem;
+    cursor: pointer;
+}

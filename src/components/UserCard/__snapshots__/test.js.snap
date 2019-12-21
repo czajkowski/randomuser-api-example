@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserCard should display basic user data 1`] = `
+<UserCard
+  address={
+    Object {
+      "city": "Inwood",
+      "postcode": "V8R 5L1",
+      "state": "Alberta",
+      "street": "Main St 1342",
+    }
+  }
+  cell="932-986-0296"
+  email="ryder.pelletier@example.com"
+  firstName="Ryder"
+  id="1"
+  lastName="Pelletier"
+  onClick={[MockFunction]}
+  phone="249-324-2721"
+  thumbnail="https://randomuser.me/api/portraits/thumb/men/14.jpg"
+  username="heavyelephant166"
+>
+  <div
+    className="container"
+  >
+    <img
+      className="thumbnail"
+      src="https://randomuser.me/api/portraits/thumb/men/14.jpg"
+    />
+    <div
+      className="details"
+    >
+      <div
+        className="entry important"
+      >
+        <div>
+          First name
+        </div>
+        <div>
+          Ryder
+        </div>
+      </div>
+      <div
+        className="entry important"
+      >
+        <div>
+          Last name
+        </div>
+        <div>
+          Pelletier
+        </div>
+      </div>
+      <div
+        className="entry"
+      >
+        <div>
+          Username
+        </div>
+        <div>
+          heavyelephant166
+        </div>
+      </div>
+      <div
+        className="entry"
+      >
+        <div>
+          Email
+        </div>
+        <a
+          href="mailto:{email}"
+        >
+          ryder.pelletier@example.com
+        </a>
+      </div>
+      <button
+        className="button"
+        onClick={[Function]}
+      >
+        Details
+      </button>
+    </div>
+  </div>
+</UserCard>
+`;

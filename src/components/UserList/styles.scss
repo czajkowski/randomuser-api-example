@@ -1,0 +1,32 @@
+@import 'theme';
+
+.message {
+    background: #D3D3D3;
+    padding: 1rem;
+    border-radius: 1rem;
+    min-width: 20rem;
+    max-width: 26rem;
+    margin: 1rem;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+.pulsing {
+    background: #D3D3D3;
+    animation-name: color;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes color {
+  0% {
+    background-color: #D3D3D3;
+  }
+  50% {
+    background-color: #95C2C6;
+  }
+  100 {
+    background-color: #D3D3D3;
+  }
+}

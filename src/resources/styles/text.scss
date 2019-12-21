@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+$defaultFontFamily: 'Roboto', sans-serif;
+$defaultFontSize: 12px;
+$defaultLineHeight: 1.2;
+
+$font: #{$defaultFontSize} / #{$defaultLineHeight} $defaultFontFamily;
