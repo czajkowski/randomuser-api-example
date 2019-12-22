@@ -12,7 +12,7 @@ const prepareQuery = (params = {}) =>
         .map((entry) => entry.join('='))
         .join('&');
 
-const getUsersUrl = (page = 0, { nationality }) => {
+const getUsersUrl = (page = 1, { nationality }) => {
     const queryString = prepareQuery({
         seed: SEED,
         results: PAGE_SIZE,
@@ -95,9 +95,15 @@ const cache = {};
 
 const Api = {
     getUsers: function (page, { nationality }, { prefetch = true } = {}) {
+        // This should be handled by the API.
+        if (page > TOTAL_PAGES) {
+            return Promise.reject(new Error('Invalid request.'));
+        }
+
         // Create a cache array for given nationality
         cache[nationality] = cache[nationality] || [];
 
+        // Get cached response promise for selected nationality and selected page
         let responsePromise = cache[nationality][page];
 
         // If data not found in cache fetch it from API.
@@ -122,7 +128,8 @@ const Api = {
 
         // Here we can try to prefetch next page if next page is still in available range.
         if (prefetch && page < TOTAL_PAGES) {
-            this.getUsers(page + 1, { nationality }, { prefetch: false});
+            // Don't fetch more pages, just the next one (prefetch = false)
+            this.getUsers(page + 1, { nationality }, { prefetch: false });
         }
 
         return responsePromise;

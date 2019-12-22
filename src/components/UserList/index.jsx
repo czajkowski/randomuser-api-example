@@ -7,6 +7,9 @@ import UserCard from '../UserCard';
 
 import styles from './styles.scss';
 
+// Loader and NoMoreData message components are used internally.
+// They could be moved to separate folders if there is a need to
+// use then in other place throughout the app.
 const Loader = () => (
     <div className={classNames(styles.message, styles.pulsing)}>
         Loading ...

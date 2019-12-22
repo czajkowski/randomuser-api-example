@@ -5,7 +5,7 @@ const {
 
 module.exports = {
     entry: {
-        index: './src/index.js',
+        index: path.resolve(__dirname, 'src/index.jsx'),
     },
     output: {
         filename: '[name].js',
@@ -21,8 +21,7 @@ module.exports = {
         }, {
             test: /\.scss$/,
             use: [
-                "style-loader",
-                {
+                "style-loader", {
                     loader: 'css-loader',
                     options: {
                         modules: true,
@@ -46,9 +45,15 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
     ],
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+            automaticNameDelimiter: '.',
+        },
+    },
     devServer: {
         historyApiFallback: {
-            index: 'index.html'
+            index: 'index.html',
         }
-    }
+    },
 };

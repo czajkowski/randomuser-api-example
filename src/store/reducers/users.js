@@ -40,7 +40,7 @@ const initialState = {
     // All available pages
     totalPages: 0,
 
-    // Selected nationality user to filter users
+    // Selected nationality used to filter users
     nationality: DefaultNationality,
 
     // Search phrase used to filter users
